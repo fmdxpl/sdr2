@@ -1,16 +1,16 @@
 ## src/CMakeLists.txt
-## Stanisław Grams <sgrams@fmdx.pl>
+## Stanislaw Grams <stanislawgrams@gmail.com>
 ##
-## secpass.org
-## © 2019
+## 2021, fmdx.pl
+## For license information, see LICENSE
 
 list (APPEND CMAKE_MODULE_PATH cmake)
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 20)
 
 ## src ext dependencies
-find_library(LIQUIDDSP
-    NAMES liquid
-)
+find_library (LIQUIDDSP NAMES liquid)
+
+find_package(nlohmann_json 3.2.0 REQUIRED)
 
 # add src subdirs
 add_subdirectory (core)
