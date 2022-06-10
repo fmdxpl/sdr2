@@ -5,6 +5,5 @@
 ## For license information, see LICENSE
 
 add_library (core SHARED
-  template.cc
-  inc/template.h
+  receiver.c
   )

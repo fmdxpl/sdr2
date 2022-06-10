@@ -12,7 +12,10 @@ set (PACKAGE ${PROJECT_NAME})
 if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_COMPILER_IS_CLANGXX)
     add_definitions (-Wall)
     add_definitions (-Wextra)
+    add_definitions (-fmodules-ts) ## until C++23 triggers this flag
 endif ()
+
+set (CMAKE_CXX_STANDARD 23)
 
 set (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
